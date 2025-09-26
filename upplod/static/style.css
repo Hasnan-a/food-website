@@ -1,0 +1,566 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: Arial,
+    sans-serif; 
+     margin: 0;
+     padding: 0;
+    }
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* ============================== navbar ==================================== */
+        .navbar { 
+            width: 100%;
+            height: 60px;
+            background-color: #333;
+             color: white;
+           display: flex;
+             /* padding: 16px 20px;   */
+              padding-left: 20px;
+              justify-content: space-between;
+              position: fixed;
+              background-color: #39297b;
+            }
+        .logo { 
+            font-size: 1.5em; 
+            font-weight: bold;
+            margin-left: 10px;
+            margin-top: 16px;
+         }
+        .navbar ul { 
+            list-style: none; 
+            display: flex; 
+            
+        }
+        .nav-links{
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            margin-right: 480px;
+            padding-top: 18px;
+        }
+        .nav-links li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .nav-links li a:hover{
+            text-decoration: underline;
+            color: #fff;
+        }
+        ul  button{
+    background-color: #007BFF; 
+      color: white;
+      width: 70px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-right: 20px;
+      
+   
+} 
+         
+     
+/* =============================header=================================== */
+ .header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 120px 70px;
+    gap: 170px;
+}
+.text h2{
+    color: darkred;
+    font-size: 110px;
+    opacity: 0.1;
+}
+.text h1{
+    font-size: 60px;
+    color: darkred;
+    position: absolute;
+    top: 70px;
+    right: 120px;
+    left: 14px;
+}
+.header-text p{
+    padding-top: 170px;
+    font-size: 19px;
+    color: darkred;
+}
+
+
+.btn-5 button{
+    margin-top: 40px;
+    text-decoration: none;
+    width: 230px;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    border-radius: 40px;
+    color: #fff;
+    background: darkred;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 1s;
+}
+.btn-5 button:hover{
+  background: transparent;
+  border: 1px solid #333;
+  color: #333;
+}
+
+  h2{
+    color: #333;
+  }
+
+
+.text{
+    position: relative;
+} 
+/* ----- hea-img -----   */
+.header-img{
+    height:50vh;
+    overflow: hidden;
+    padding-top: 60px;
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+}
+.img-1{
+    opacity: 0;
+        animation: slide 12s infinite;
+ 
+
+}
+.img-2{
+    opacity: 0;
+    position: absolute;
+    bottom: 20px;
+    transition: 1s;
+     animation: slide2 12s infinite;
+
+}
+.img-3{
+    position: absolute;
+    bottom: 20px;
+  opacity: 0;
+  transition: 8s;
+   animation: slide3 12s infinite;
+
+} 
+ .img-4{
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+    transition: 1s;
+     animation: slide4 12s infinite; 
+ 
+}
+    @keyframes slide {
+     0%{
+  opacity: 1;
+     }
+     25%{
+        opacity: 0;
+     }
+     50%{
+        opacity: 0;
+     }
+     75%{
+        opacity: 0;
+     }
+     100%{
+        opacity: 1;
+     }
+    }
+
+
+    @keyframes slide2 {
+     0%{
+  opacity: 0;
+     }
+     25%{
+        opacity: 1;
+     }
+     50%{
+        opacity: 0;
+     }
+     75%{
+        opacity: 0;
+     }
+     100%{
+        opacity: 0;
+     }
+    }
+
+
+    @keyframes slide3 {
+     0%{
+  opacity: 0;
+     }
+     25%{
+        opacity: 0;
+     }
+     50%{
+        opacity: 1;
+     }
+     75%{
+        opacity: 0;
+     }
+     100%{
+        opacity: 0;
+     }
+    }
+
+
+    @keyframes slide4 {
+     0%{
+  opacity: 0;
+     }
+     25%{
+        opacity: 0;
+     }
+     50%{
+        opacity: 0;
+     }
+     75%{
+        opacity: 1;
+     }
+     100%{
+        opacity: 0;
+     }
+    } 
+
+
+     ------ about ------ 
+
+    .about-section {
+      width: 100%;
+      height: 100vh;
+      background-color:darkred;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .about-content {
+      max-width: 800px;
+      text-align: center;
+      color: #333;
+    }
+
+    .about-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+      .about-section{
+      height: 100vh;
+      width: 100%;
+            background-image: url("/static/img/forabout.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+     
+   .about-content p{
+    font-size: 20px;
+   }
+    /* ============================ animation ====================================  */
+
+    .header-text p{
+      animation: slightleft 3s ease forwards;
+}
+
+.header-text h1{
+      animation: slidebuttom 3s ease forwards;
+}
+.header-text h2{
+      animation: slideto 3s ease forwards;
+}
+ @keyframes slideright {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+   }
+
+@keyframes slightleft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+
+
+}
+
+@keyframes slidetop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideto {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 0.1;
+    }
+}
+
+@keyframes slidebuttom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+  
+  /* ===================================== contact =====================================  */
+
+
+
+
+.contact{
+  background: whitesmoke;
+  padding: 80px 40px;
+  display: flex;
+  gap: 50px;
+
+}
+
+
+
+
+
+    .contact-for {
+      background: #fff;
+      padding:40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+      width:100%;
+       max-width: 400px;
+       
+    }
+.contact-form{
+    background: #fff;
+    width: 550px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+     box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+     border-radius: 10px;
+}
+    .form-group {
+      
+      margin-bottom: 30px;
+    }
+
+   .contact-us input
+    {
+      width: 450px;
+      padding: 12px 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: none;
+      outline: none;
+      height: 60px;
+      border-radius: 7px;
+    }
+  .contact-us textarea{
+      width: 450px;
+      padding: 12px 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      background: none;
+      outline: none;
+      height: 140px;
+    
+ }
+    .form-group label {
+    
+      left: 10px;
+      top: 12px;
+      color: #999;
+      pointer-events: none;
+      transition: 0.3s ease all;
+      background: #fff;
+      padding: 0 5px;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:focus + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+      top: -10px;
+      left: 8px;
+      color: darkred;
+      font-size: 12px;
+    }
+
+  .contact-us button {
+      width: 100%;
+      padding: 12px;
+      background: darkred;
+      color: #fff;
+      font-size: 19px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 25px;
+    }
+
+    button:hover {
+      background: darkred;
+    }
+    .contact-form h2{
+        color: darkred;
+        font-size: 39px;
+    }
+
+    .contact-icon{
+      margin-top: 210px;
+      margin-left: 20px;
+    }
+
+
+    .email .icon-email{
+      font-size: 25px;
+      color: #000;
+    
+      
+    }
+     .email .icon-email i{
+  color: darkred;
+  font-size: 30px;
+  padding-right: 10px;
+
+     }
+    
+      .p{
+        font-size: 19px;
+    padding-left: 40px;
+    padding-top: 3px;
+      }
+      .p-1{
+        font-size: 19px;
+    padding-left: 30px;
+    padding-top: 3px;
+      }
+      
+.btn-1 {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+}
+
+.last-section{
+  width: 100%;
+  height: 50vh;
+  background: darkred;
+  padding-top: 50px;
+
+}
+.last-sections{
+  display: flex;
+  gap: 120px;
+  margin-left: 40px;
+}
+
+.last-1 h6{
+  font-size: 25px;
+  color: #fff;
+}
+
+.last-1 p{
+  font-size: 19px;
+  color: #fff;
+  padding-top: 10px;
+}
+ .last-1 .icons{
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+ }
+
+.last-2 p,.last-3 p,.last-4{
+   font-size: 25px;
+   color: #fff;
+}
+ .last-2 li,.last-3 li{
+   list-style: none;
+   color: #fff;
+   margin-top: 5px;
+   font-size: 17px;
+ }
+
+.last-4.footer-p{
+  font-size: 10px;
+}
+.last-4 a{
+   font-size: 19px;
+   text-decoration: none;
+   color: #fff;
+   
+}
+.after{
+  color: #333;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  margin-top: 22px;
+}
+.after-p{
+  font-size: 20px;
+ margin-left: 500px;
+  color: #fff;
+  padding-top: 18px;
+}

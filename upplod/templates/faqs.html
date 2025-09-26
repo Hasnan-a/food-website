@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        .faqs{
+            background: whitesmoke;
+            width: 100%;
+            height: 110vh;
+            padding-top: 80px;
+        }
+        .faq-text{
+            align-items: center;
+            text-align: center;
+        }
+        .faq-text button{
+            border: 0;
+            outline: 0;
+            background: darkred;
+            color: #fff;
+            width: 90px;
+            height: 30px;
+            border-radius: 40px;
+            font-size: 15px;
+        }
+        .faq-text h2{
+            padding-top: 20px;
+            font-size: 35px;
+            color: darkred;
+        }
+        .faq-text p{
+            color: #333;
+            font-size: 25px;
+            padding-top: 15px;
+        }
+        .faq-cards{
+            margin-left: 260px;
+            margin-top: 30px;
+         display: flex;
+         gap: 40px;
+        }
+        .faq-card{
+            width: 360px;
+            height: 150px;
+            background: #fff;
+            text-align: center;
+            padding-top: 30px;
+            border-radius: 20px;
+                  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .faq-card:hover{
+                    transform: translateY(-10px);
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+        }
+        .faq-card h6{
+            font-size: 22px;
+            color: #39297b;
+        }
+        .faq-cards p{
+            font-size: 19px;
+            padding-top: 8px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <section class="faqs" id="faqSection">
+     <div class="faq-text">
+      <a href=""><button>pro faqs</button></a>
+      <h2>Maximize Your Food Experience</h2>
+      <p>Get the most from Food Bites  Resturant with these quick  success Delicious and Yummy Food.</p>
+     </div>
+     <div class="faq-cards">
+        <div class="faq-card"  data-aos="flip-left">
+            <h6>Be Clear About Your Goals</h6>
+            <p>Share your project objectives  <br>and audience clearly to help us  <br>craft the best solution.</p>
+        </div>
+        <div class="faq-card"  data-aos="flip-right">
+            <h6>Be Clear About Your Goals</h6>
+            <p>Share your project objectives  <br>and audience clearly to help us <br> craft the best solution.</p>
+        </div>
+        </div>
+     <div class="faq-cards">
+             <div class="faq-card"  data-aos="flip-left">
+            <h6>Be Clear About Your Goals</h6>
+            <p>Share your project objectives  <br>and audience clearly to help us  <br>craft the best solution.</p>
+        </div>
+        <div class="faq-card"  data-aos="flip-right">
+            <h6>Be Clear About Your Goals</h6>
+            <p>Share your project objectives  <br>and audience clearly to help us <br> craft the best solution.</p>
+        </div>
+     </div>
+     
+    </section>
+             <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

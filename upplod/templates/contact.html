@@ -1,0 +1,122 @@
+<!-- 
+   Order Form 
+  
+
+  <div class="order-form" id="orderForm">
+    <div class="form-content">
+      <span class="close-btn" onclick="closeForm()">✖</span>
+      <h2>Order Now</h2>
+              <!-- You can show messages here if needed 
+        {% if messages %}
+            {% for message in messages %}
+                <p class="success">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+
+
+        <form method="post">
+    {% csrf_token %}
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="messege" placeholder="Your Messege" required></textarea>
+      <button type="submit">Submit Order</button>
+    </div>
+  </div>
+</form> -->
+<!-- <!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background: #f3f4f6;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 80px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+ 
+
+        .message {
+            text-align: center;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body> -->
+
+
+
+  <div class="order-form" id="orderForm">
+    <div class="form-content">
+      <span class="close-btn" onclick="closeForm()">✖</span>
+   <h2>Order Now</h2>
+
+  <form id="contactForm">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="message" id="responseMessage"></div>
+ </div>
+  </div>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const messageElement = document.getElementById('responseMessage');
+
+    fetch('/submit-order/', {
+      method: 'POST',
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+      messageElement.textContent = data.message;
+      messageElement.style.color = data.status === 'success' ? 'green' : 'red';
+
+      if (data.status === 'success') {
+        form.reset();
+      }
+    })
+    .catch(error => {
+      messageElement.textContent = 'Something went wrong. Try again.';
+      messageElement.style.color = 'red';
+    });
+  });
+</script>
+
+  
+

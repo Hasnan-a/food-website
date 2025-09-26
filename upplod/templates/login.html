@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>Login Page</h2>
+<form method="post">
+    {% csrf_token %}
+    
+    <label>Username:</label><br>
+    <input type="text" name="username"><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="pass"><br><br>
+
+    <button type="submit">Login</button><br><br>
+    <a href="{% url 'signup' %}">Don't have an account? Sign up</a>
+</form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    background-image: url(/static/img/download.jfif);
+    justify-content: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.walpaper{
+    width: 420px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.input-box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    position: relative;
+    
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+
+.input-box input::placeholder{
+    color: #fff;
+
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    
+    
+}
+.remember{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember label input{
+    color: #fff;
+    margin-right: 3px;
+}
+
+.remember a{
+    color: #fff;
+    text-decoration: none;
+}
+.remember a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, .1);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+}
+
+.register{
+    text-align: center;
+    font-size: 14.5px;
+    margin: 20px 0 29px;
+}
+
+.register p a{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <div class="walpaper">
+  <form method="post">
+    {% csrf_token %}
+    <h1>Login</h1>
+    <div class="input-box">
+   <input type="text" placeholder="username" name="username">
+   <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="input-box">
+        <input type="pasword" placeholder="pasword" name="pass">
+        <i class="fa-solid fa-lock"></i>
+    </div>
+
+    <!-- <div class="remember">
+        <label><input type="checkbox">Remember me</label>
+        <a href="">Forget Pasword</a>
+    </div> -->
+    <button class="btn">Login</button>
+
+
+    <div class="register">
+        <p>Don't have an account? <a href="{% url 'signup' %}">register</a></p>
+    </div>
+   </form>
+    </div>
+</body>
+</html>
+{% endblock %}

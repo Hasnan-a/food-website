@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block title %}Signup{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        body{
+            background-image: url(/static/img/download\ \(1\).jfif);
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        
+        
+        }
+        .walpaper{
+    width: 420px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 40px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    margin-left: 380px;
+    margin-top: 4px;
+}
+h2{
+    font-size: 36px;
+    text-align: center;
+}
+
+.input-box{
+    width: 100%;
+    height: 50px;
+    margin: 40px 0;
+
+    
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    padding-left: 20px;
+    
+}
+.input-box label{
+    font-size: 20px;
+ margin-left: 17px;
+
+}
+
+.input-box input::placeholder{
+    color: #fff;
+
+}
+
+
+
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, .1);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 19px;
+    color: #fff;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    
+<div class="walpaper">
+<h2>Signup Page</h2>
+<form method="post">
+    {% csrf_token %}
+    <div class="input-box">
+  
+    <input type="text" name="username" placeholder="Username"><br>
+ </div>
+ <div class="input-box">
+    
+    <input type="email" name="email" placeholder="Enter your email"><br>
+</div>
+<div class="input-box">
+  
+    <input type="password" name="password1" placeholder="Enter your password"><br>
+</div>
+<div class="input-box">
+ 
+    <input type="password" name="password2" placeholder="Confirmed password"><br><br>
+</div>
+    <button type="submit" class="btn">Signup</button><br><br>
+    <a href="{% url 'login' %}">Already have an account?</a>
+</form>
+</div> 
+{% endblock %}
+
+
+
+

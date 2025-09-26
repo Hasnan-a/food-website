@@ -1,0 +1,464 @@
+ {% extends 'base.html' %}
+{% load static %}  
+{% block content %}
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+     <style>
+    .header{
+        padding: 120px 70px;
+    }
+    .navbar{
+      background: #39297b;
+    }
+    .about-section{
+      background-image: url(/static/img/forabout.jpeg);
+    }
+    .about-section{
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      padding: 200px;
+    }
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: Arial,
+    sans-serif; 
+     margin: 0;
+     padding: 0;
+    }
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* ============================== navbar ==================================== */
+        .navbar { 
+            width: 100%;
+            height: 60px;
+            background-color: #333;
+             color: white;
+           display: flex;
+             /* padding: 16px 20px;   */
+              padding-left: 20px;
+              justify-content: space-between;
+              position: fixed;
+              background-color: #39297b;
+            }
+        .logo { 
+            font-size: 1.5em; 
+            font-weight: bold;
+            margin-left: 10px;
+            margin-top: 16px;
+         }
+        .navbar ul { 
+            list-style: none; 
+            display: flex; 
+            
+        }
+        .nav-links{
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            margin-right: 480px;
+            padding-top: 18px;
+        }
+        .nav-links li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .nav-links li a:hover{
+            text-decoration: underline;
+            color: #fff;
+        }
+        ul  button{
+    background-color: #007BFF; 
+      color: white;
+      width: 70px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-right: 20px;
+      
+   
+} 
+         
+     
+/* =============================header=================================== */
+ .header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 120px 70px;
+    gap: 170px;
+}
+.text h2{
+    color: darkred;
+    font-size: 110px;
+    opacity: 0.1;
+    padding-right: 220px;
+}
+.text h1{
+    font-size: 60px;
+    color: darkred;
+    position: absolute;
+    top: 70px;
+    right: 120px;
+    left: 14px;
+}
+.header-text p{
+    padding-top: 170px;
+    font-size: 19px;
+    color: darkred;
+}
+
+
+.btn-5 button{
+    margin-top: 40px;
+    text-decoration: none;
+    width: 230px;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    border-radius: 40px;
+    color: #fff;
+    background: darkred;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 1s;
+}
+.btn-5 button:hover{
+  background: transparent;
+  border: 1px solid #333;
+  color: #333;
+}
+
+  h2{
+    color: #333;
+  }
+
+
+.text{
+    position: relative;
+} 
+/* ----- hea-img -----   */
+.header-img{
+    height:50vh;
+    overflow: hidden;
+    padding-top: 60px;
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+}
+.img-1{
+    opacity: 0;
+        animation: slide 12s infinite;
+ 
+
+}
+.img-2{
+    opacity: 0;
+    position: absolute;
+    bottom: 20px;
+    transition: 1s;
+     animation: slide2 12s infinite;
+
+}
+.img-3{
+    position: absolute;
+    bottom: 20px;
+  opacity: 0;
+  transition: 8s;
+   animation: slide3 12s infinite;
+
+} 
+ .img-4{
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+    transition: 1s;
+     animation: slide4 12s infinite; 
+ 
+}
+    @keyframes slide {
+     0%{
+  opacity: 1;
+     }
+     25%{
+        opacity: 0;
+     }
+     50%{
+        opacity: 0;
+     }
+     75%{
+        opacity: 0;
+     }
+     100%{
+        opacity: 1;
+     }
+    }
+
+
+    @keyframes slide2 {
+     0%{
+  opacity: 0;
+     }
+     25%{
+        opacity: 1;
+     }
+     50%{
+        opacity: 0;
+     }
+     75%{
+        opacity: 0;
+     }
+     100%{
+        opacity: 0;
+     }
+    }
+
+
+    @keyframes slide3 {
+     0%{
+  opacity: 0;
+     }
+     25%{
+        opacity: 0;
+     }
+     50%{
+        opacity: 1;
+     }
+     75%{
+        opacity: 0;
+     }
+     100%{
+        opacity: 0;
+     }
+    }
+
+
+    @keyframes slide4 {
+     0%{
+  opacity: 0;
+     }
+     25%{
+        opacity: 0;
+     }
+     50%{
+        opacity: 0;
+     }
+     75%{
+        opacity: 1;
+     }
+     100%{
+        opacity: 0;
+     }
+    } 
+
+
+     ------ about ------ 
+
+    .about-section {
+      width: 100%;
+      height: 100vh;
+      background-color:darkred;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .about-content {
+      max-width: 800px;
+      text-align: center;
+      color: #333;
+    }
+
+    .about-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+      .about-section{
+      height: 100vh;
+      width: 100%;
+            background-image: url("/static/img/forabout.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+     
+   .about-content p{
+    font-size: 20px;
+   }
+    /* ============================ animation ====================================  */
+
+    .header-text p{
+      animation: slightleft 3s ease forwards;
+}
+
+.header-text h1{
+      animation: slidebuttom 3s ease forwards;
+}
+.header-text h2{
+      animation: slideto 3s ease forwards;
+}
+ @keyframes slideright {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+   }
+
+@keyframes slightleft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+
+
+}
+
+@keyframes slidetop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideto {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 0.1;
+    }
+}
+
+@keyframes slidebuttom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+  
+     </style>
+ </head>
+ <body>
+    <!-- <-- ========================== navbar ===================== -- -->
+<section class="navbarSection" id="navbarSection">
+            <nav class="navbar">
+                <div class="logo">FoodWeb</div>
+                <ul>
+                    <div class="nav-links">
+                    <li><a href="#headerSection">Home</a></li>
+                    <li><a href="#aboutSection">About</a></li>
+                    <li><a href="#servicesSection">Services</a></li>
+                    <li><a href="#faqSection">Faqs</a></li>
+                </div>
+                <div class="logout">
+                    <a href="{% url 'logout' %}" style="color: red;"><button>Logout</button></a>
+                </div>
+                </ul>
+            </nav> 
+
+</section> 
+    <!-- <-- ===================================== header =========================  -->
+    <section class="header" id="headerSection">
+  <div class="header-text">
+    <div class="text">
+      <h2>B I T E </h2>
+      <h1>Welcom To<br>Delicious Bites<br>Food Point</h1>
+    </div>
+    <p>We Offers Delicious Food and Good Services To Grow Our Busniss <br>Digitally</p>
+    <a href="#servicesSection" class="btn-5"><button>Visit Our Services </button></a>
+  </div>
+
+
+   <!-- ------ header-img ----  -- -->
+
+  <div class="header-img">
+    <div class="img-box">
+    <div class="img-1">
+        <img src="/static/img/pizzaboy.jpeg" alt="">
+    </div>
+    <div class="img-2">
+        <img src="/static/img/food.jpeg" alt="">
+    </div>
+    <div class="img-3">
+        <img src="/static/img/download.png" alt="">
+    </div>
+    <div class="img-4">
+        <img src="/static/img/waiter.jpeg" alt="">
+    </div>
+
+    </div>
+  </div>
+</section>
+ <!-- =========================== about ====================================== -- -->
+  <section class="about-section" id="aboutSection">
+    <div class="about-content" data-aos="fade-up">
+      <h1>About Our Kitchen</h1>
+      <p>
+        Welcome to our cozy corner of culinary delight! At <strong>Golden Spoon</strong>, we blend tradition and flavor to bring you heartwarming meals made with love. From handpicked ingredients to time-honored recipes, every dish tells a story of passion and freshness. Join us on a flavorful journey that feels just like home.
+      </p>
+    </div>
+  </section>
+
+
+       
+         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+ </body>
+ </html>
+ {% include "services.html" with pics=pics %}
+
+{% endblock %} 
